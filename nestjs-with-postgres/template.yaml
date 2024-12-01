@@ -130,9 +130,9 @@ spec:
         targetPath: ./tenant-gitops
     - id: publishGitops
       name: Publishing to Deployment Resource Repository
-      action: publish:github
+      action: publish:gitlab
       input:
-        repoUrl: ${{ parameters.repoUrl }}
+        repoUrl: https://github.com?owner=${{parameters.githubGroup}}&repo=${{parameters.namespace}}-${{parameters.application_id}}-gitops
         title: gitops resources for ${{parameters.namespace}}-poi-backend-app
         description: gitops resources for ${{parameters.namespace}}-poi-backend-app
         sourcePath: ./tenant-gitops
