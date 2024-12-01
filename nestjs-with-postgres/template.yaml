@@ -39,7 +39,7 @@ spec:
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:
-              - github.com
+              - https://github.com
     - title: Provide information about the new component
       required:
         - cluster_id
@@ -106,6 +106,7 @@ spec:
         sourcePath: ./source
         description: ${{parameters.description}}
         repoUrl: ${{ parameters.repoUrl }}
+
     - id: templateGitops
       name: Generating the deployment resources and artefacts
       action: fetch:template
