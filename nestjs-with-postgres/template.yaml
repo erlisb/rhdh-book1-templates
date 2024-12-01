@@ -152,7 +152,7 @@ spec:
         appName: ${{parameters.namespace}}-${{parameters.application_id}}-bootstrap
         argoInstance: main
         namespace: janus-argocd
-        repoUrl: https://github.com/${{parameters.githubGroup}}/${{parameters.namespace}}-${{parameters.application_id}}-gitops.git
+        repoUrl: ${{ parameters.repoUrl }}-gitops.git
         path: 'argocd/'
   output:
     links:
