@@ -33,6 +33,13 @@ spec:
           type: string
           description: Help others understand what this component is for
           default: Creates a NestJS Service together with a PostgreSQL database
+        repoUrl:
+          title: Repository Location
+          type: string
+          ui:field: RepoUrlPicker
+          ui:options:
+            allowedHosts:
+              - github.com
     - title: Provide information about the new component
       required:
         - cluster_id
@@ -98,10 +105,7 @@ spec:
       input:
         sourcePath: ./source
         description: ${{parameters.description}}
-        repoUrl: https://github.com?owner=${{parameters.githubGroup}}&repo=${{parameters.namespace}}-${{parameters.application_id}}
-        defaultBranch: main
-        protectDefaultBranch: false
-        repoVisibility: public
+        repoUrl: ${{ parameters.repoUrl }}
     - id: templateGitops
       name: Generating the deployment resources and artefacts
       action: fetch:template
