@@ -15,7 +15,7 @@ spec:
   type: service
 
   parameters:
-    - title: Provide information about the GitHab location
+    - title: Provide information about the GitHub location
       required:
         - githubGroup
       properties:
