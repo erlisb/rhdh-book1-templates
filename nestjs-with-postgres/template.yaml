@@ -39,7 +39,7 @@ spec:
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:
-              - https://github.com
+              - github.com
     - title: Provide information about the new component
       required:
         - cluster_id
