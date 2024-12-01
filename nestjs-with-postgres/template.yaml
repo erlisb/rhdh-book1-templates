@@ -15,7 +15,7 @@ spec:
   type: service
 
   parameters:
-    - title: Provide information about the GitLab location
+    - title: Provide information about the GitHab location
       required:
         - githubGroup
       properties:
@@ -26,6 +26,8 @@ spec:
           default: development
           enum:
             - development
+            - production
+            - erlisb
         description:
           title: Description
           type: string
