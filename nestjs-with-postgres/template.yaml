@@ -94,7 +94,7 @@ spec:
           description: ${{parameters.description}}
     - id: publishSource
       name: Publishing to Source Code Repository
-      action: publish:gitlab
+      action: publish:github
       input:
         sourcePath: ./source
         description: ${{parameters.description}}
